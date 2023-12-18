@@ -6,6 +6,9 @@ contract OrdersContract{
 
     uint public orderCounters = 0;
 
+    constructor() {
+        createOrder("BTC", "Take profit", 38, 8, 3);
+    }
 
     struct Orders {
         uint id;
@@ -21,8 +24,8 @@ contract OrdersContract{
 
 
     function createOrder(string memory _stock, string memory _state, uint256  _percentage, uint256 _margin, uint256 _pnlUsdt) public {
-        orders[1] = Orders(orderCounters, _stock, _state, _percentage,_margin, _pnlUsdt, block.timestamp);
         orderCounters++;
-
+        orders[orderCounters] = Orders(orderCounters, _stock, _state, _percentage,_margin, _pnlUsdt, block.timestamp);
+        
     }
 }
