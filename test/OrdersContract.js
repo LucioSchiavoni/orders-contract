@@ -20,6 +20,17 @@ contract("OrdersContract", () =>  {
         const ordersCounters = await this.ordersContract.orderCounters()
         const order = await this.ordersContract.orders(ordersCounters)
 
-        assert.equal(order.id.toNumber(), ordersCounters)
+        assert.equal(order.id.toNumber(), ordersCounters);
+    
     })
+
+    it("Order created successfully", async() => {
+        const result = await this.ordersContract.createOrder("BTC", "Stop Loss", 7, 35, 15);
+        const ordersEvent = result.logs[0].args;
+        assert.equal(ordersEvent.id.toNumber(), 2);
+        assert.equal(ordersEvent.stock, 'BTC');
+    });
+
+
+
 })
