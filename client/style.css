@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #0A192F;
+    color: white;
+    
+}
+
+
+.item{
+    background-color: aqua;
+}
+
+
+.item-list{
+    background-color: chocolate;
+}
+
+form{
+    display: grid;
+    grid-template-rows: 1;
+    gap: 10px;
+    padding: 4px;
+}
+
+input{
+    border-radius: 4px;
+    border: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding: 10px;
+    
+}
+
+select {
+    border-radius: 4px;
+    border: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding: 10px;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    padding: 2px;
+    border-radius: 2px;
+    
+
+}

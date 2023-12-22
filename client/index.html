@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crypto Orders</title>
+</head>
+<body>
+<div class="container">
+    <div class="item">
+        <h1>Dapp</h1>
+        <form  id="orderForm">
+            <h4>Registra tu orden</h4>
+            <input type="text" placeholder="Nombre del activo" name="stock" required >
+            <select name="state" required>
+                <option value="">Estado de la transaccion</option>
+                <option value="Take Profit">Take Profit</option>
+                <option value="Stop Loss">Stop Loss</option>
+                <option value="Order Limit">Order Limit</option>
+            </select>
+         
+            <input type="text" placeholder="" pattern="[0-9]*" name="percentage" required>
+            <input type="text" placeholder="" pattern="[0-9]*" name="margin" required>
+            <input type="text" placeholder="" pattern="[0-9]*" name="pnlUsdt" required>
+
+            <button type="submit">Registrar orden</button>
+        </form>
+    </div>
+    <div class="item-list">
+        <p>List</p>
+    </div>
+</div>
+    
+ <script src="./libs/@truffle/contract/browser-dist/truffle-contract.min.js"></script>
+ <script src="./ui.js"></script>
+    <script src="./app.js"></script>
+    
+   
+</body>
+</html>
